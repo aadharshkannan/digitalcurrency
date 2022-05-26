@@ -4,7 +4,7 @@ require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-etherscan");
 
 module.exports = {
-  defaultNetwork: "matic",
+  defaultNetwork: "hardhat",
   networks: {
     hardhat: {
     },
@@ -15,6 +15,10 @@ module.exports = {
     ropsten: {
       url: `https://eth-ropsten.alchemyapi.io/v2/${process.env.ALCHEMY_API_KEY}`,
       accounts: [process.env.PRIVATE_KEY]
+    },
+    goerli:{
+      url: `https://eth-goerli.alchemyapi.io/v2/${process.env.ALCHEMY_API_GOERLI_KEY}`,
+      accounts:[process.env.PRIVATE_KEY]
     }
   },
   etherscan: {
